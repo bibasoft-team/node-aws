@@ -3,6 +3,7 @@ FROM node:alpine
 ENV GLIBC_VER=2.31-r0
 
 # install glibc compatibility for alpine
+# original https://github.com/aws/aws-cli/issues/3553#issuecomment-615149941
 RUN apk --no-cache add \
     binutils \
     curl \
