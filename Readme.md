@@ -1,5 +1,7 @@
 # Docker image with Node and AWS CLI v2
 
+
+
 ## AWS CLI Configuration Variables
 
 Environment Variables:
