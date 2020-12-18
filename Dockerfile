@@ -27,4 +27,9 @@ RUN apk --no-cache add \
     curl \
     && rm glibc-${GLIBC_VER}.apk \
     && rm glibc-bin-${GLIBC_VER}.apk \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    # Install python/pip
+    && apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python \
+    && python3 -m ensurepip \
+    && pip3 install --no-cache --upgrade pip setuptools \
+    && apk add --no-cache tar
